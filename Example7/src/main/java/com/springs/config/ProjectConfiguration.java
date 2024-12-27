@@ -4,18 +4,19 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import com.springs.beans.Animal;
+import com.springs.beans.Person;
 
-//@Configuration
+@Configuration
 public class ProjectConfiguration {
 
-	//@Bean
+	@Bean
 	public Animal Animal1() {
 		Animal a1= new Animal();
 		a1.setColour("black");
 		a1.setName("Bear");
 		return a1;
 	}
-	//@Bean
+	@Bean
 	public Animal Animal2() {
 		Animal a1= new Animal();
 		a1.setColour("white");
@@ -29,4 +30,19 @@ public class ProjectConfiguration {
 		a1.setName("Tiger");
 		return a1;
 	}
+	@Bean
+	public Person person1() {
+		Person person1=   new Person();
+		person1.setName("manoj");
+		person1.setPet(Animal1());
+		return person1;
+	}
+//	@Bean
+//	public Person person1(Animal pet) {
+//		Person person1=new Person("Harish", pet);
+//	//	person1.setName("manoj");
+//		//person1.setPet(pet);
+//		return person1;
+//	}
+	
 }

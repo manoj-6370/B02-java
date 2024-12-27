@@ -8,6 +8,11 @@ import jakarta.annotation.PreDestroy;
 //@Component
 public class Animal {
 private String colour;
+@Override
+public String toString() {
+	return "Animal [colour=" + colour + ", name=" + name + "]";
+}
+
 private String name;
 
 public Animal(String colour, String name) {
