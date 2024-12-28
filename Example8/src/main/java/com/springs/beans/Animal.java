@@ -1,11 +1,13 @@
 package com.springs.beans;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 
 @Component
+
 public class Animal {
 private String colour;
 @Override

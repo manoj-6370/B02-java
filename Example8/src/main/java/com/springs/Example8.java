@@ -15,7 +15,10 @@ public class Example8 {
 		var context= new AnnotationConfigApplicationContext(ProjectConfiguration.class);
 	//	var context= new webxmlApplicationContext(ProjectConfiguration.class);
 		Person person1=context.getBean(Person.class);
+		Person person2=context.getBean(Person.class);
 		System.out.println(person1);
+		System.out.println(person1.hashCode());
+		System.out.println(person2.hashCode());
 		
 		
 		
